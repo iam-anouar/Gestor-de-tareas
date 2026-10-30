@@ -15,12 +15,20 @@ function FormularioTarea({ onGuardar, onCancelar }: Props) {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (titulo.trim() === "" || responsable.trim() === "") {
+    const tituloLimpio = titulo.trim();
+    const descripcionLimpia = descripcion.trim();
+    const responsableLimpio = responsable.trim();
+
+    if (tituloLimpio === "" || responsableLimpio === "") {
       setError("El título y el responsable son obligatorios");
       return;
     }
 
-    onGuardar({ titulo, descripcion, responsable });
+    onGuardar({
+      titulo: tituloLimpio,
+      descripcion: descripcionLimpia,
+      responsable: responsableLimpio,
+    });
   };
 
   return (

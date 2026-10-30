@@ -2,7 +2,7 @@ import type { Tarea } from "../types";
 
 interface Props {
   tarea: Tarea;
-  onEliminar: (id: number) => void;
+  onEliminar: (id: string) => void;
 }
 
 function TarjetaTarea({ tarea, onEliminar }: Props) {

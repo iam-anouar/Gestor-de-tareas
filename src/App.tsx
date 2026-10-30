@@ -10,15 +10,14 @@ function App() {
   const [modalAbierta, setModalAbierta] = useState(false);
 
   const agregarTarea = (datos: Omit<Tarea, "id">) => {
-    setTareas([...tareas, { id: Date.now(), ...datos }]);
+    setTareas([...tareas, { id: crypto.randomUUID(), ...datos }]);
     setModalAbierta(false);
   };
 
-  const eliminarTarea = (id: number) => {
+  const eliminarTarea = (id: string) => {
     setTareas(tareas.filter((t) => t.id !== id));
   };
 
-  // Se calcula en cada render, sin useState
   const tareasVisibles = tareas.filter((t) =>
     t.titulo.toLowerCase().includes(busqueda.toLowerCase())
   );
