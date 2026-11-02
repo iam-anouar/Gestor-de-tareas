@@ -1,0 +1,11 @@
+{
+  "tareas": [
+    {
+      "titulo": "DPL",
+      "descripcion": "Despliegue app",
+      "responsable": "Anouar",
+      "id": "mYY-CQsYzlg"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
