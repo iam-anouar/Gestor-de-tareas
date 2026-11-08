@@ -65,3 +65,15 @@ export const Botones = styled.div`
 export const TextoError = styled.p`
   color: red;
 `;
+
+export const CajaFormulario = styled.div`
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+`;
+
+export const Opciones = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+`;
